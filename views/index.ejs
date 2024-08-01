@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+</head>
+
+<body>
+  <% if (user) { %>
+    <h1>Hey, <%= user.username %>!</h1>
+    <p>
+      <a href="/auth/sign-out"> Sign out</a>
+    </p>
+    <% } else { %>
+      <h1>Hello, unauthenticated friend!</h1>
+      <a href="/auth/create-user">Sign up</a>
+      <a href="/auth/sign-in">sign in</a>
+      <% } %>
+      <p><a href="/vip-lounge">Get into the VIP Users Only lounge!</a></p>
+</body>
+
+</html>
